@@ -1,0 +1,52 @@
+{
+  "name": "codependence-cron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsup src/index.ts",
+    "cmd:script": "ts-node src/index.ts --debug",
+    "cmd:bin": "node src/index.ts --debug",
+    "lint": "eslint src --fix",
+    "test": "eslint src"
+  },
+  "keywords": [],
+  "author": "Jeff Wainwright <yowainwright@gmail.com> (https://jeffry.in)",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.13",
+    "@types/node": "^18.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.29.0",
+    "@typescript-eslint/parser": "^5.29.0",
+    "codependence": "^0.2.2",
+    "eslint": "^8.18.0",
+    "eslint-config-prettier": "^8.5.0",
+    "ts-node": "^10.8.1",
+    "tslib": "^2.4.0",
+    "tsup": "^6.1.2",
+    "tsutils": "^3.21.0",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "commander": "^9.3.0",
+    "fs-extra": "^10.1.0"
+  },
+  "codependence": {
+    "codependencies": [
+      "commander",
+      "fs-extra",
+      "@types/fs-extra",
+      "@types/node",
+      "@typescript-eslint/eslint-plugin",
+      "@typescript-eslint/parser",
+      "codependence",
+      "eslint",
+      "eslint-config-prettier",
+      "ts-node",
+      "tslib",
+      "tsup",
+      "tsutils",
+      "typescript"
+    ]
+  }
+}
