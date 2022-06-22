@@ -36,3 +36,4 @@ jobs:
 
               [1]: https://github.com/yowainwright/codependence-cron
             branch: update-dependencies
+            labels: codependies
