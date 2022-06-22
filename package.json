@@ -7,7 +7,9 @@
     "build": "tsup src/index.ts",
     "cmd:script": "ts-node src/index.ts --debug",
     "cmd:bin": "node src/index.ts --debug",
+    "diff": "git diff-index --quiet HEAD --",
     "lint": "eslint src --fix",
+    "update": "codependence --update",
     "test": "eslint src"
   },
   "keywords": [],
