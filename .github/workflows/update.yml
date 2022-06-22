@@ -2,7 +2,7 @@ name: update deps
 
 on:
   schedule:
-    - cron:  '*/30 * * * *'
+    - cron:  '*/5 * * * *'
 
 jobs:
   udpate-deps:
@@ -12,27 +12,44 @@ jobs:
       matrix:
         node-version: [16.x]
 
+    name: codependence
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: pnpm/action-setup@v2.0.1
         with:
           version: 6.32.11
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'pnpm'
       - run: pnpm install --no-frozen-lockfile
-      - run: pnpm install
       - run: pnpm build
-      - run: pnpm cmd:bin
-      - run: pnpm update
+      - run: pnpm lint
+      - run: pnpm test
+        env:
+          CI: true
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
         with:
             token: ${{ secrets.GITHUB_ACTION_TOKEN }}
-            commit-message: Update dependencies
-            title: "[Codependence]  update dependencies"
+            commit-message: 'chore: Update dependencies'
+            title: '[Codependence]  update dependencies'
             body: |
               ## Dependency updates
 
@@ -40,4 +57,4 @@ jobs:
 
               [1]: https://github.com/yowainwright/codependence-cron
             branch: update-dependencies
-            labels: codependies
+            labels: codependencies
