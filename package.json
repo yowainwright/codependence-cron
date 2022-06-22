@@ -10,7 +10,7 @@
     "diff": "git diff-index --quiet HEAD --",
     "lint": "eslint src --fix",
     "update": "codependence --update",
-    "test": "eslint src"
+    "test": "eslint src/*"
   },
   "keywords": [],
   "author": "Jeff Wainwright <yowainwright@gmail.com> (https://jeffry.in)",
