@@ -24,7 +24,7 @@ jobs:
           cache: 'pnpm'
       - run: pnpm install --no-frozen-lockfile
       - run: pnpm build
-      - run: pnpm cmd:bin
+      - run: pnpm cmd:script
       - run: pnpm update
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
