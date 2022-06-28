@@ -2,7 +2,7 @@ name: update codependencies
 
 on:
   schedule:
-    - cron:  '0 6 1/3 *'
+    - cron:  '0 6 * *'
 
 jobs:
   udpate-deps:
