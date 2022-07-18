@@ -3,6 +3,10 @@ name: update codependencies
 on:
   schedule:
     - cron:  '0 5 * * 1'
+  push:
+    branches:
+      - master
+      - update-dependencies
 
 jobs:
   udpate-deps:
@@ -40,4 +44,4 @@ jobs:
               [1]: https://github.com/yowainwright/codependence-cron
               [2]: https://github.com/peter-evans/create-pull-request
             branch: update-dependencies
-            labels: codependies
+            labels: codependencies
