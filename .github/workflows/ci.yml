@@ -2,7 +2,7 @@ name: codependence
 
 on:
   push:
-    branches: [master]
+    branches: [master, update-dependencies]
   pull_request:
     branches: [master]
 
