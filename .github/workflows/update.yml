@@ -3,10 +3,6 @@ name: update codependencies
 on:
   schedule:
     - cron:  '0 5 * * 1'
-  push:
-    branches:
-      - master
-      - update-dependencies
 
 jobs:
   udpate-deps:
