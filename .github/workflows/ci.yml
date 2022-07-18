@@ -1,10 +1,17 @@
 name: codependence
 
 on:
+  workflow_run:
+    workflows:
+      - 'update codependencies'
   push:
-    branches: [master, update-dependencies]
+    branches:
+      - master
+      - update-dependencies
   pull_request:
-    branches: [master, update-dependencies]
+    branches:
+      - master
+      - update-dependencies
 
 jobs:
   build:
