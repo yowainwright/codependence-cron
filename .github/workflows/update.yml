@@ -2,8 +2,8 @@ name: update codependencies
 
 on:
   schedule:
-    - cron:  '0 5 * * 1'
-    # - cron: '*/5 * * * *'
+    # - cron:  '0 5 * * 1'
+    - cron: '*/5 * * * *'
 
 jobs:
   udpate-deps:
@@ -42,3 +42,9 @@ jobs:
               [2]: https://github.com/peter-evans/create-pull-request
             branch: update-dependencies
             labels: codependencies
+      - name: Repository Dispatch
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          repository: yowainwright/codependence-cron
+          event-type: codependence_update
