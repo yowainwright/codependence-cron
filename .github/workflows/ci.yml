@@ -2,11 +2,9 @@ name: codependence
 
 on:
   push:
-    branches:
-      - master
+    branches: [master]
   pull_request:
-    branches:
-      - master
+    branches: [master]
   repository_dispatch:
     types: [codependence_update]
 
