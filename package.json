@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsup src/index.ts",
-    "cmd:script": "ts-node src/index.ts --debug",
+    "cmd:script": "tsx src/index.ts --debug",
     "cmd:bin": "node dist/index.ts --debug",
     "diff": "git diff-index --quiet HEAD --",
     "lint": "eslint src --fix",
@@ -24,10 +24,10 @@
     "eslint": "9.1.1",
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-prettier": "^5.1.3",
-    "ts-node": "10.9.2",
     "tslib": "2.6.2",
     "tsup": "8.0.2",
     "tsutils": "^3.21.0",
+    "tsx": "^4.17.0",
     "typescript": "5.4.5"
   },
   "dependencies": {
@@ -38,8 +38,10 @@
   },
   "codependence": {
     "codependencies": [
+      "@eslint/js",
       "commander",
       "fs-extra",
+      "typescript-eslint",
       "@types/fs-extra",
       "@types/node",
       "@typescript-eslint/eslint-plugin",
@@ -47,10 +49,11 @@
       "codependence",
       "eslint",
       "eslint-config-prettier",
-      "ts-node",
+      "eslint-plugin-prettier",
       "tslib",
       "tsup",
       "tsutils",
+      "tsx",
       "typescript"
     ]
   }
