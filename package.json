@@ -17,11 +17,11 @@
   "license": "MIT",
   "devDependencies": {
     "@types/fs-extra": "11.0.4",
-    "@types/node": "24.7.2",
-    "@typescript-eslint/eslint-plugin": "8.46.0",
-    "@typescript-eslint/parser": "8.46.0",
+    "@types/node": "24.8.1",
+    "@typescript-eslint/eslint-plugin": "8.46.1",
+    "@typescript-eslint/parser": "8.46.1",
     "codependence": "^0.3.1",
-    "eslint": "9.37.0",
+    "eslint": "9.38.0",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
     "tslib": "2.8.1",
@@ -31,10 +31,10 @@
     "typescript": "5.9.3"
   },
   "dependencies": {
-    "@eslint/js": "^9.37.0",
+    "@eslint/js": "^9.38.0",
     "commander": "14.0.1",
     "fs-extra": "11.3.2",
-    "typescript-eslint": "^8.46.0"
+    "typescript-eslint": "^8.46.1"
   },
   "codependence": {
     "codependencies": [
